@@ -20,8 +20,16 @@ var app = angular
   app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
+      .when('/', {
         templateUrl: 'views/post.html',
         controller: 'PostsCtrl'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
       })
       .otherwise({
         redirectTo: '/'
